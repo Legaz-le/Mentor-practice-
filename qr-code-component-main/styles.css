@@ -19,9 +19,10 @@ body {
 
 .container {
     max-width: 300px;
-    padding: 20px;
+    width: 100%;
+    padding: 16px;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 20px;
     background: var(--white);
     text-align: center;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
@@ -29,21 +30,22 @@ body {
 
 .container img {
     width: 100%;
-    border-radius: 15px;
-    margin-bottom: 1.5rem;
+    border-radius: 16px;
+    margin-bottom: 16px;
     
 }
 
 .header {
-    margin: 0;
+    margin: 16px 0 12px;
     font-size: 22px;
     color: var(--slate-900);
     font-weight: 700;
 }
 
 .description {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--slate-500);
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 1.5;
+    margin: 0 10px 10px;
 }
