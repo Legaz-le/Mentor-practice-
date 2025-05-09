@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Young+Serif&display=swap');
+:root {
+  --white: hsl(0, 0%, 100%);
+
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+
+  --brown-800: hsl(14, 45%, 36%);
+
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
+
+body {
+  background: var(--stone-100);
+  display: flex;
+  min-height: 100svh;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.container {
+  width: 736px;
+  height: 100%;
+  align-items: center;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.heading {
+  color: var(--brown-800);
+  font-family: "Young Serif";
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.heading img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.heading h2 {
+  font-size: 40px;
+  margin: 24px 0 16px;
+  
+}
+
+.heading p,
+.nutritional p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--stone-600);
+}
+
+.time {
+  background: var(--rose-50);
+  border-radius: 15px;
+  padding: 1em;
+}
+
+.time-heading {
+  color: var(--rose-800);
+  font-family: "Outfit";
+  margin: 0;
+}
+
+.ingredients h2,
+.instructions h2,
+.nutritional h2 {
+  font-size: 28px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-family: "Young Serif";
+  font-weight: 400;
+}
+.time,
+.ingredients,
+.instructions,
+.nutritional {
+  padding: 0.5em 1em;
+  margin: 0;
+}
+.time li,
+.ingredients li,
+.instructions li {
+  padding-left: 1em;
+  margin: 0.5em;
+  font-family: "Outfit";
+  color: var(--stone-600);
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid var(--stone-150);
+    margin: 32px 0;
+}
+
+ul,
+ol {
+  padding-left: 1em;
+  margin: 0.5em;
+  line-height: 1.8;
+}
+
+.bold {
+  font-weight: 700;
+}
+.time li::marker {
+  color: var(--brown-800);
+  font-size: 0.75em;
+}
+.brown {
+  color: var(--brown-800);
+}
+
+.ingredients li::marker {
+  color: var(--brown-800);
+  font-size: bold;
+}
+
+.instructions li::marker {
+  color: var(--rose-800);
+  font-weight: 700;
+}
+
+.divider {
+  border-bottom: 1px solid var(--stone-150);
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 16px;
+  width: 100%;
+
+}
+
+tr.divider td {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+td {
+  width: 50%;
+  padding: 0.75em 1.5em;
+  color: var(--stone-600);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .container {
+      padding: 24px;
+      width: 100%;
+    }
+  }
