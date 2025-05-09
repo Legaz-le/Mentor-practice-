@@ -81,6 +81,7 @@ body {
   margin-top: 32px;
   margin-bottom: 16px;
   font-family: "Young Serif";
+  color: var(--brown-800);
   font-weight: 400;
 }
 .time,
