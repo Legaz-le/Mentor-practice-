@@ -1,0 +1,44 @@
+@use 'sass:map';
+
+$primary: #326dee;
+$secondary: #1ac888;
+$error: #d32752;
+$info: #f6c31c;
+
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "error": $error,
+  "info": $info,
+  "blue": #1919e6,
+  "red": #e61919,
+  "yellow": #e6e619,
+  "green": #19e635,
+  "orange": #ffa600,
+  "purple": #9900ff,
+  "gray": #808080,
+  "black": black,
+  "white": white,
+  "Red": hsl(0, 78%, 62%),
+  "Cyan": hsl(180, 62%, 55%),
+  "Orange": hsl(34, 97%, 64%),
+  "Blue": hsl(212, 86%, 64%),
+"Grey-500": hsl(234, 12%, 34%),
+ "Grey-400": hsl(212, 6%, 44%),
+ "White": hsl(0, 0%, 100%),
+);
+
+
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;

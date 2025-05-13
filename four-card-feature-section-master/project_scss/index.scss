@@ -1,0 +1,106 @@
+@use "../scss" as *;
+
+body {
+  min-height: 100svh;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.heading-section {
+  text-align: center;
+}
+
+.heading-title {
+  font-weight: 400;
+}
+
+.heading-second {
+  font-weight: 600;
+}
+
+.heading-description {
+  font-size: 15px;
+  font-weight: 200;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.cards-container {
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 30px;
+
+  @media (max-width: 375px) {
+    grid-template-columns:  1fr;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid;
+  min-height: 200px;
+
+  // Desktop positioning
+  &:nth-child(1) {
+    // Supervisor
+    border-color: hsl(180, 62%, 55%);
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  &:nth-child(2) {
+    // Team Builder
+    border-color: hsl(0, 78%, 62%);
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  &:nth-child(3) {
+    // Karma
+    border-color: hsl(34, 97%, 64%);
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  &:nth-child(4) {
+    // Calculator
+    border-color: hsl(212, 86%, 64%);
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  // Mobile adjustments
+  @media (max-width: 375px) {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+  }
+
+  &-title {
+    margin: 0 0 1rem;
+    color: hsl(234, 12%, 34%);
+    font-size: 1.25rem;
+  }
+
+  &-body {
+    margin: 0;
+    color: hsl(212, 6%, 44%);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  img {
+    margin-top: 40px;
+    float: right;
+  }
+}
