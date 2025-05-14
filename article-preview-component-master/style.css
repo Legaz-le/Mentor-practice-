@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap");
+
+:root {
+  --very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --grayish-Blue: hsl(212, 23%, 69%);
+  --light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  background-color: var(--light-Grayish-Blue);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100svh;
+  font-family: "Manrope", sans-serif;
+  padding: 2rem;
+}
+
+.container {
+  width: 730px;
+  display: flex;
+  background: white;
+  overflow: visible;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.drawers {
+  width: 285px;
+  height: 280px;
+  border-radius: 15px 0 0 15px;
+  object-fit: cover;
+}
+.body {
+  padding: 30px;
+  width: 445px;
+  position: relative;
+}
+
+.body-title {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--very-Dark-Grayish-Blue);
+  margin-bottom: 15px;
+}
+.body-description {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--desaturated-Dark-Blue);
+  line-height: 1.6;
+}
+
+.img-section {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.author-name {
+  color: hsl(217, 19%, 35%);
+  font-size: 0.9rem;
+}
+
+.post-date {
+  color: hsl(212, 23%, 69%);
+  font-size: 0.8rem;
+}
+
+.share-btn {
+  background: hsl(210, 46%, 95%);
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.share-tooltip {
+  position: absolute;
+  background: hsl(217, 19%, 35%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  bottom: 80px;
+  right: -64px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid hsl(217, 19%, 35%);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.share-btn.active {
+  background: hsl(214, 17%, 51%);
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 90%;
+    flex-direction: column;
+    max-width: 400px;
+    overflow: visible;
+  }
+  .drawers {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+  }
+  .body {
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .share-tooltip {
+    position: absolute;
+    background: hsl(217, 19%, 35%);
+    color: white;
+    padding: 2rem 2rem;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  .tooltip-arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid hsl(217, 19%, 35%);
+  }
+}
