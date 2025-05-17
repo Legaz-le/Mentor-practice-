@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap");
+:root {
+  --Purple-600: hsl(246, 80%, 60%);
+  --Orange-300-work: hsl(15, 100%, 70%);
+  --Blue-300-play: hsl(195, 74%, 62%);
+  --Pink-400-study: hsl(348, 100%, 68%);
+  --Green-400-exercise: hsl(145, 58%, 55%);
+  --Purple-700-social-: hsl(264, 64%, 52%);
+  --Yellow-300-self-care: hsl(43, 84%, 65%);
+
+  --Navy-950: hsl(226, 43%, 10%);
+  --Navy-900: hsl(235, 46%, 20%);
+  --Purple-500: hsl(235, 45%, 61%);
+  --Navy-200: hsl(236, 100%, 87%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  background: var(--Navy-950);
+  display: flex;
+  font-family: "Rubik", sans-serif;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 950px;
+  width: 95%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+
+.main-body {
+  height: 100%;
+  background-color: var(--Navy-900);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 250px;
+}
+.heading {
+  background: var(--Purple-600);
+  border-radius: 15px;
+  padding: 40px;
+}
+.heading img {
+  width: 80px;
+  height: 80px;
+  padding: 3px;
+  background-color: white;
+  border-radius: 50%;
+  margin-bottom: 35px;
+}
+.name-section {
+  padding-bottom: 30px;
+}
+
+.text-present-6 {
+  font-size: 18px;
+  color: var(--Navy-200);
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.name__user {
+  margin: 0;
+  color: white;
+  font-weight: 200;
+  font-size: 3rem;
+}
+
+.name__format {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem !important;
+}
+.over {
+  color: var(--Purple-500);
+  font-size: 1.1rem;
+  font-weight: 300;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  position: relative;
+}
+.over:hover {
+  color: white;
+}
+.over.selection::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    animation: underline 0.3s ease;
+}
+
+@keyframes underline {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.selection {
+  color: white !important;
+  font-weight: 400 !important;
+}
+
+.activities {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  display: grid;
+  gap: 25px;
+}
+.activity {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  background: var(--Navy-900);
+  width: 250px;
+  border-radius: 15px;
+  background: none !important;
+}
+
+.activity::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background-repeat: no-repeat;
+  background-position: 90% -10%;
+  z-index: 0;
+}
+.activity-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  padding: 26px;
+  z-index: 1;
+  height: 82%;
+  border-radius: 15px;
+  background: var(--Navy-900);
+  transition: all 0.3 ease;
+}
+.activity-container:hover {
+  background: hsl(235, 40%, 30%);
+}
+
+.ellipsis:hover path {
+  fill: white;
+}
+
+.top-section {
+  margin-bottom: 20px;
+  font-size: 18px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-weight: 400;
+}
+.part-down {
+  line-height: 1.6;
+}
+.hours {
+  font-size: 50px;
+  color: white;
+  font-weight: 200;
+}
+
+.work::before {
+  background-image: url("images/icon-work.svg");
+  background-color: var(--Orange-300-work);
+}
+
+.play::before {
+  background-image: url("images/icon-play.svg");
+  background-color: var(--Blue-300-play);
+}
+.study::before {
+  background-image: url("images/icon-study.svg");
+  background-color: var(--Pink-400-study);
+}
+.exercise::before {
+  background-image: url("images/icon-exercise.svg");
+  background-color: var(--Green-400-exercise);
+}
+.social::before {
+  background-image: url("images/icon-social.svg");
+  background-color: var(--Purple-700-social-);
+}
+.self-care::before {
+  background-image: url("images/icon-self-care.svg");
+  background-color: var(--Yellow-300-self-care);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1.5rem;
+    display: block;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .main-body {
+    width: 100%;
+    height: auto;
+  }
+
+  .heading {
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .heading img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0;
+  }
+
+  .name-section {
+    padding-bottom: 0;
+  }
+
+  .name__user {
+    font-size: 1.5rem;
+  }
+
+  .name__format {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    line-height: 1;
+  }
+
+  .activities {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .part-down {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .activity {
+    width: 100%;
+    height: 160px;
+  }
+
+  .activity::before {
+    height: 45%;
+    background-position: 90% -20%;
+  }
+
+  .activity-container {
+    height: 85%;
+    padding: 1.5rem;
+  }
+
+  .hours {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .last-week {
+    font-size: 0.9rem;
+  }
+}
