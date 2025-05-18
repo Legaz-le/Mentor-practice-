@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap");
+:root {
+  --Green-400: hsl(172, 67%, 45%);
+
+  --Green-900: hsl(183, 100%, 15%);
+  --Grey-500: hsl(186, 14%, 43%);
+  --Grey-400: hsl(184, 14%, 56%);
+  --Grey-200: hsl(185, 41%, 84%);
+  --Grey-50: hsl(189, 47%, 97%);
+  --White: hsl(0, 100%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100svh;
+  justify-content: center;
+  align-items: center;
+  background: var(--Green-400);
+  display: flex;
+  flex-direction: column;
+  font-family: "Space Mono", monospace;
+  padding: 2rem;
+}
+
+.container {
+  width: 920px;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  gap: 3rem;
+  background: var(--White);
+}
+
+img {
+  display: block;
+}
+
+.inputs {
+  position: relative;
+  width: 100%;
+}
+
+.inputs img {
+  position: absolute;
+  left: 1rem;
+  top: 30%;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none; /* Make image non-interactive */
+}
+.bill-side {
+  flex: 1;
+  padding: 1rem;
+}
+
+.text-info {
+  color: var(--Grey-500);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.bill {
+  width: 100%;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  padding-left: 2.5rem;
+  font-size: 1.5rem;
+  color: var(--Green-900);
+  text-align: right;
+  background: var(--Grey-50);
+  border: 2px solid (--Grey-50);
+  margin-bottom: 2.5rem;
+}
+.bill::-webkit-inner-spin-button,
+.custom-info::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+input:focus {
+  outline: 2px solid var(--Green-400);
+}
+input[type="number"]:not(.bill){
+    margin-top: 0.5rem;
+}
+.error {
+    border-color: #ff5252;
+}
+
+
+.procent {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 48px;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.main-info, .custom-info {
+  width: 100%;
+  height: 48px; 
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.main-info {
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--Green-900);
+  color: var(--White);
+  border: 2px solid transparent; 
+}
+
+.custom-info {
+  background: var(--Grey-50);
+  vertical-align: middle;
+  padding-top: 0.3rem;
+  color: var(--Green-900);
+  border: 2px solid var(--Grey-50);
+  text-align: right;
+  outline: none;
+}
+
+
+.main-info.active,
+.main-info:hover {
+  background: var(--Green-400);
+  color: var(--Green-900);
+}
+
+.tip-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  background: var(--Green-900);
+  border-radius: 1rem;
+  justify-content: space-between;
+}
+
+.wrapper {
+    line-height: 1.9;
+}
+
+.body-tip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.heading-tip {
+  color: var(--White);
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.heading-person {
+  color: var(--Grey-400);
+  font-size: 0.8rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--Green-400);
+}
+.reset {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: var(--Green-400);
+  color: var(--Green-900);
+}
+.reset:hover {
+  background: var(--Grey-200);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    gap: 0px;
+  }
+  .procent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+}
