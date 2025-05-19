@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="container">
+      <form  id="loginForm" method="post">
+        <h1 class="heading">Contact Us</h1>
+        <section class="wrapper top-line">
+          <div>
+            <label class="text-info"
+              >First Name <span class="star">*</span></label
+            >
+            <input class="first-line" type="text" name="Name" required />
+            <span class="error-display">This field is required</span>
+          </div>
+          <div>
+            <label class="text-info"
+              >Last Name <span class="star">*</span></label
+            >
+            <input class="first-line" type="text" name="Surname" required />
+            <span class="error-display">This field is required</span>
+          </div>
+        </section>
+        <section class="wrapper">
+          <label class="text-info"
+            >Email Address<span class="star">*</span></label
+          >
+          <input class="email-input" type="email" name="email" required />
+          <span class="error-display">Please enter a valid email address</span>
+          <span class="error-display">This field is required</span>
+        </section>
+        <section class="wrapper">
+          <label class="text-info"
+            >Query Type <span class="star">*</span></label
+          >
+          <div class="third-section">
+            <div class="box-container">
+              <input class="checkbox" type="radio" name="queryType" required />
+              <label>General Enquiry</label>
+            </div>
+            <div class="box-container">
+              <input class="checkbox" type="radio" name="queryType" required />
+              <label>Support Request</label>
+            </div>
+          </div>
+          <span class="error-display">Please select a query type</span>
+        </section>
+        <section class="wrapper">
+          <label class="text-info">Message <span class="star">*</span></label>
+          <textarea class="email-input message" name="message"></textarea>
+          <span class="error-display">This field is required</span>
+        </section>
+        <section class="wrapper">
+          <div class="inside-check">
+            <input type="checkbox" id="consent" name="contact" required />
+            <label for="consent" class="agree-section"
+              >I consent to being contacted by the team
+              <span class="star">*</span></label
+            >
+          </div>
+          <span class="error-display"
+            >To submit this form, please consent to being contacted</span
+          >
+        </section>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="display-message">
+      <div class="inside-message">
+        <svg
+          class="checkmark-svg"
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="24"
+            cy="24"
+            r="23"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+
+          <path
+            class="checkmark-path"
+            d="M14 24.5L21.5 32L34 19"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <h2 class="success-message">Message Sent!</h2>
+      </div>
+      <p class="text-message">
+        Thanks for completing the form. We'll be in touch soon!
+      </p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

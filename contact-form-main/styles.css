@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap");
+:root {
+  --Green-200-lighter: hsl(148, 38%, 91%);
+  --Green-600-medium: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+
+  --White: hsl(0, 0%, 100%);
+  --Grey-500-medium: hsl(186, 15%, 59%);
+  --Grey-900-darker: hsl(187, 24%, 22%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  background: var(--Green-200-lighter);
+  min-height: 100svh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.container {
+  height: 100%;
+  max-width: 650px;
+  background: var(--White);
+  padding: 2.5rem;
+  border-radius: 8px;
+}
+
+.wrapper {
+  margin-bottom: 1.9rem;
+}
+.star {
+  color: var(--Green-600-medium);
+  margin-left: 0.4rem;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: var(--Grey-900-darker);
+}
+
+.text-info {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Grey-900-darker);
+  margin-bottom: 0.6rem;
+  display: inline-block;
+}
+.first-line,
+.email-input,
+.box-container,
+.message {
+  padding: 0.8rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--Grey-900-darker);
+  width: 100%;
+}
+.first-line:focus,
+.email-input:focus,
+.message:focus {
+  border-color: var(--Green-600-medium);
+}
+
+.checkbox[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--Grey-500-medium) !important;
+  border-radius: 50% !important;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+.checkbox[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: var(--Green-600-medium);
+  border-radius: 50%;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--Grey-500-medium);
+  border-radius: 4px;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+input[type="checkbox"]:checked::before {
+  content: "✓";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--White);
+  font-weight: bold;
+}
+input[type="checkbox"]:checked {
+  background: var(--Green-600-medium);
+}
+
+.message {
+  height: 120px;
+  resize: none;
+}
+.first-line:hover,
+.email-input:hover {
+  border: 1px solid var(--Green-600-medium);
+}
+.error-display {
+  display: none;
+  color: var(--Red);
+  margin-top: 0.25rem;
+  font-size: 15px;
+}
+
+.top-line,
+.third-section {
+  display: flex;
+  gap: 1.2rem;
+}
+.inside-check,
+.box-container {
+  display: flex;
+  gap: 0.6rem;
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  background: var(--Green-600-medium);
+  color: var(--White);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:hover {
+  background: hsla(169, 82%, 20%);
+}
+.display-message {
+  position: absolute;
+  display: none;
+  z-index: 2;
+  top: 5px;
+  border-radius: 5px;
+  padding: 1.3rem;
+  color: var(--White);
+  background: var(--Grey-900-darker);
+}
+.success-message {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.text-message {
+    font-size: 15px;
+    font-weight: 400;
+}
+.inside-message {
+    display: flex;
+    gap: 0.6rem;
+}
+svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 640px) {
+  .top-line,
+  .third-section {
+    flex-direction: column;
+  }
+
+  .container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
