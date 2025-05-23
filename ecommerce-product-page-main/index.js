@@ -105,6 +105,10 @@ function updateActiveImage(index) {
   mainShoes.src = newSrc;
   lightBoxImg.src = newSrc;
 }
+images.forEach((img, index) => {
+  img.addEventListener("click", () => updateActiveImage(index));
+});
+
 next.addEventListener("click", () =>
   updateActiveImage((currentIndex + 1) % lightboxImages.length)
 );
