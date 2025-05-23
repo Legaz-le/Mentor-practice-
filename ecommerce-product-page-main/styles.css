@@ -91,6 +91,7 @@ header {
 }
 .main-body-hr {
   margin-bottom: 5rem;
+  border: 0.1rem solid var(--Light-grayish-blue);
 }
 main {
   display: flex;
