@@ -109,6 +109,10 @@ images.forEach((img, index) => {
   img.addEventListener("click", () => updateActiveImage(index));
 });
 
+lightboxImages.forEach((img, index) => {
+  img.addEventListener("click", () => updateActiveImage(index));
+});
+
 next.addEventListener("click", () =>
   updateActiveImage((currentIndex + 1) % lightboxImages.length)
 );
