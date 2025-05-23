@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay" id="overlay"></div>
+      <header>
+        <div class="logo-information">
+          <div class="logo">
+            <img
+              src="/images/icon-menu.svg"
+              alt="menu"
+              class="menu"
+              id="menu"
+            />
+            <img src="/images/logo.svg" alt="logo" class="logo-img" />
+          </div>
+          <div class="buttons-section">
+            <a class="page-button">Collections</a>
+            <a class="page-button">Men</a>
+            <a class="page-button">Women</a>
+            <a class="page-button">About</a>
+            <a class="page-button">Contact</a>
+          </div>
+          <div class="menu-mobile" id="mySidenav">
+            <img src="/images/icon-close.svg" alt="close" class="close-menu"/>
+            <div class="nav-links">
+              <a class="nav-link" > Collections</a>
+              <a class="nav-link" > Men </a>
+              <a class="nav-link" > Women </a>
+              <a class="nav-link" > About </a>
+              <a class="nav-link" > Contact </a>
+            </div>
+          </div>
+        </div>
+        <div class="cart-section">
+          <div class="cart-wrapper">
+            <img src="./images/icon-cart.svg" alt="cart" id="cart" />
+            <span class="cart-counter">0</span>
+          </div>
+          <img
+            src="/images/image-avatar.png"
+            alt="image-avatar"
+            class="avatar"
+          />
+        </div>
+      </header>
+      <hr class="main-body-hr" />
+      <main>
+        <div class="images">
+          <div class="display-shoes">
+            <img
+              src="/images/image-product-1.jpg"
+              alt="main-shoes"
+              class="main-shoes"
+            />
+          </div>
+          <div class="mobile-carousel-controls">
+            <img
+              src="images/icon-previous.svg"
+              class="carousel-arrow"
+              alt="Previous"
+              id="previous-mobile"
+            />
+            <img
+              src="images/icon-next.svg"
+              class="carousel-arrow"
+              id="next-mobile"
+              alt="Next"
+            />
+          </div>
+          <div class="small-images">
+            <img
+              src="/images/image-product-1-thumbnail.jpg"
+              alt="product1"
+              class="small-img"
+            />
+            <img
+              src="/images/image-product-2-thumbnail.jpg"
+              alt="product2"
+              class="small-img"
+            />
+            <img
+              src="/images/image-product-3-thumbnail.jpg"
+              alt="product3"
+              class="small-img"
+            />
+            <img
+              src="/images/image-product-4-thumbnail.jpg"
+              alt="product4"
+              class="small-img"
+            />
+          </div>
+        </div>
+        <div class="information-side">
+          <p class="name-company">Sneaker Company</p>
+          <h1 class="title-product">Fall Limited Edition Sneakers</h1>
+          <p class="product-description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="pricing">
+            <div class="main-price-section">
+              <span class="main-price">$125.00</span>
+              <span class="discount">50%</span>
+            </div>
+            <span class="previous-price">$250.00</span>
+          </div>
+          <form class="add-cart" id="formSubmit" method="post">
+            <div class="plus-minus">
+              <img src="/images/icon-minus.svg" alt="minus" class="minus" />
+              <p class="zero">0</p>
+              <img src="/images/icon-plus.svg" alt="plus" class="plus" />
+            </div>
+            <button type="submit" class="add">
+              <img src="/images/icon-cart.svg" alt="cart" class="add-img" />Add
+              to cart
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+    <div class="purchased-info">
+      <p class="purchased-name">Cart</p>
+      <hr class="purchased-hr" />
+      <div class="display-or-not">
+        <div class="image-info">
+          <img
+            src="/images/image-product-1-thumbnail.jpg"
+            alt="purchased-shoes"
+            class="purchased-img"
+          />
+          <div class="info">
+            <h2 class="name-of-shoes">Fall Limited Edition Sneakers</h2>
+            <span class="purchased-price"
+              >$125.00<span class="x">x</span
+              ><span class="amount-purchased">0</span
+              ><span class="total">125.00$</span></span
+            >
+          </div>
+          <img src="/images/icon-delete.svg" alt="delete" class="delete" />
+        </div>
+        <button class="checkout">Checkout</button>
+      </div>
+      <div class="empty-cart">
+        <p class="empty">Your cart is empty.</p>
+      </div>
+    </div>
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-content">
+        <img
+          src="/images/icon-close.svg"
+          alt="Close lightbox"
+          class="close-lightbox"
+        />
+        <img src="/images//icon-next.svg" alt="next" class="next" />
+        <img src="/images/icon-previous.svg" alt="previous" class="previous" />
+        <img
+          src="/images/image-product-1.jpg"
+          alt="Main product view"
+          class="lightbox-main-img"
+          id="lightbox-main"
+        />
+        <div class="lightbox-thumbnails">
+          <img
+            src="/images/image-product-1-thumbnail.jpg"
+            alt="Thumbnail 1"
+            class="lightbox-thumb"
+          />
+          <img
+            src="/images/image-product-2-thumbnail.jpg"
+            alt="Thumbnail 2"
+            class="lightbox-thumb"
+          />
+          <img
+            src="/images/image-product-3-thumbnail.jpg"
+            alt="Thumbnail 3"
+            class="lightbox-thumb"
+          />
+          <img
+            src="/images/image-product-4-thumbnail.jpg"
+            alt="Thumbnail 4"
+            class="lightbox-thumb"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
