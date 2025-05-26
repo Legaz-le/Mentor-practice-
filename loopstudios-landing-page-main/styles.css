@@ -1,0 +1,588 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap");
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Grey-200: hsl(0, 0%, 85%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header {
+  background-image: url("images/desktop/image-hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+nav {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-close,
+.mobile-menu-toggle {
+  display: none;
+}
+.links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  cursor: pointer;
+
+  a {
+    color: var(--White);
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--White);
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+.link-nav::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--White);
+  transition: width 0.3s ease;
+}
+.title-header {
+  position: relative;
+  font-size: 4rem;
+  color: white;
+  border: 2px solid white;
+  padding: 1rem 2rem;
+  max-width: 500px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  margin-top: 4rem;
+}
+main {
+  margin-top: 6rem;
+}
+.img-title {
+  margin-bottom: 6rem;
+  position: relative;
+}
+.img-main {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.img-main img {
+  display: block;
+  object-fit: contain;
+}
+.text-main {
+  position: absolute;
+  background: var(--White);
+  padding: 3rem;
+  z-index: 1;
+  width: 52%;
+  right: 0;
+  bottom: 0;
+  transform: translateY(20%);
+}
+.text-title {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: "Josefin Sans";
+  margin-bottom: 1.5rem;
+}
+.text-info {
+  line-height: 1.6;
+  font-family: "Alata";
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 50%);
+}
+.card-section {
+  margin-bottom: 6rem;
+}
+.heading-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.card-title {
+  font-family: "Josefin Sans";
+  font-size: 2.7rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.see-all {
+  padding: 0.7rem 2rem;
+  min-width: 150px;
+  width: auto;
+  border: 1px solid var(--Black);
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  align-items: center;
+  font-family: "Josefin Sans";
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+.see-all-mobile {
+  display: none;
+}
+.see-all:hover {
+  background: var(--Black);
+  color: var(--White);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
+  gap: 2rem;
+}
+.card-item {
+  position: relative;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.card-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    transparent 100%
+  );
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+.card-item p {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: var(--White);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  width: 60%;
+  margin: 0;
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  z-index: 2;
+}
+.deep-earth {
+  background-image: url("/images/desktop/image-deep-earth.jpg");
+}
+.night-arcade {
+  background-image: url("/images/desktop/image-night-arcade.jpg");
+}
+.soccer-team {
+  background-image: url("/images/desktop/image-soccer-team.jpg");
+}
+.the-grid {
+  background-image: url("/images/desktop/image-grid.jpg");
+}
+.above-vr {
+  background-image: url("/images/desktop/image-from-above.jpg");
+}
+.rocket {
+  background-image: url("/images/desktop/image-pocket-borealis.jpg");
+}
+.curiosity {
+  background-image: url("/images/desktop/image-curiosity.jpg");
+}
+.fisheye {
+  background-image: url("/images/desktop/image-fisheye.jpg");
+}
+.card-item:hover {
+  transform: scale(0.98);
+  opacity: 0.4;
+}
+.card-item:hover p {
+  color: var(--Black); 
+  font-weight: 400;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8); 
+}
+footer {
+  background: var(--Black);
+  padding: 3rem 0;
+}
+.main-footer {
+  padding-top: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-footer {
+  width: 9rem;
+}
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  cursor: pointer;
+  a {
+    color: var(--White);
+    width: 1.4rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--White);
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+.website-links {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.website-tag {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  cursor: pointer;
+
+  a {
+    color: var(--White);
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--White);
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+.menu-mobile {
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background: var(--Black);
+  color: var(--White);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1001;
+}
+.menu-mobile.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.nav-links {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 6rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--White);
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--Soft-orange);
+}
+
+.website-links p {
+  color: var(--Grey-200);
+  font-family: "Josefin Sans", sans-serif;
+}
+.close-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.overlay.active {
+  display: block;
+}
+
+@media (max-width: 375px) {
+  header {
+    height: 70vh;
+    width: 100%;
+    min-height: 500px;
+    background-image: url("images/mobile/image-hero.jpg");
+  }
+
+  .links {
+    display: none;
+  }
+  nav {
+    justify-content: space-between;
+    padding: 0 1.5rem;
+  }
+
+  .logo img {
+    width: 5rem;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    z-index: 10;
+  }
+
+  .title-header {
+    font-size: 2.3rem;
+    padding: 1.2rem;
+    margin: 2rem auto;
+    max-width: 90%;
+  }
+  .img-main {
+    padding: 0;
+  }
+  .img-main img {
+    width: 100%;
+  }
+
+  .img-title {
+    flex-direction: column;
+    margin-bottom: 3rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .text-main {
+    position: relative;
+    transform: none;
+    margin-top: -2rem;
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+  .heading-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .text-title {
+    margin: 0 auto 1rem;
+    font-size: 1.8rem;
+  }
+  .text-info {
+    margin: 0 auto;
+    max-width: 330px;
+  }
+  .card-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 0;
+    width: 100%;
+  }
+  .card-title {
+    font-size: 2rem;
+  }
+
+  .card-item {
+    height: 150px;
+    width: 100%;
+  }
+
+  .card-item p {
+    font-size: 1.5rem;
+    width: 80%;
+    left: 1rem;
+  }
+
+  .main-footer {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .website-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .website-tag {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  a:hover::after,
+  .card-item:hover p {
+    display: none;
+  }
+  .see-all-desktop {
+    display: none;
+  }
+  .see-all-mobile {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    border: 1px solid var(--Black);
+    text-transform: uppercase;
+    font-family: "Josefin Sans";
+    font-size: 0.9rem;
+    margin: 0 auto 2rem;
+  }
+  .card-section {
+    gap: 2rem;
+  }
+  .deep-earth {
+    background-image: url("/images/mobile/image-deep-earth.jpg");
+  }
+  .night-arcade {
+    background-image: url("/images/mobile/image-night-arcade.jpg");
+  }
+  .soccer-team {
+    background-image: url("/images/mobile/image-soccer-team.jpg");
+  }
+  .the-grid {
+    background-image: url("/images/mobile/image-grid.jpg");
+  }
+  .above-vr {
+    background-image: url("/images/mobile/image-from-above.jpg");
+  }
+  .rocket {
+    background-image: url("/images/mobile/image-pocket-borealis.jpg");
+  }
+  .curiosity {
+    background-image: url("/images/mobile/image-curiosity.jpg");
+  }
+  .fisheye {
+    background-image: url("/images/mobile/image-fisheye.jpg");
+  }
+}
