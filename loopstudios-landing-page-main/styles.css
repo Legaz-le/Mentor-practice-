@@ -112,13 +112,12 @@ nav {
 }
 .title-header {
   position: relative;
-  font-size: 4rem;
+  font-size: 4.3rem;
   color: white;
   border: 2px solid white;
-  padding: 1rem 2rem;
-  max-width: 500px;
+  padding: 2rem 2rem;
+  max-width: 640px;
   text-transform: uppercase;
-  line-height: 1.2;
   font-family: "Josefin Sans";
   font-weight: 300;
   margin-top: 4rem;
@@ -479,7 +478,6 @@ footer {
   }
 
   .text-title {
-    margin: 0 auto 1rem;
     font-size: 1.8rem;
   }
   .text-info {
