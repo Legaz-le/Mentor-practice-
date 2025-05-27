@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Room homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <section class="header-hero">
+      <div class="overlay" id="overlay"></div>
+      <header aria-label="Main header with navigation">
+        <div class="logo">
+          <img src="/images/icon-hamburger.svg" alt="menu-mobile" class="menu" >
+          <img src="/images/logo.svg" alt="icon-logo" class="main-logo"/>
+        </div>
+        <nav>
+          <a tabindex="1">Home</a>
+          <a tabindex="2">Shop</a>
+          <a tabindex="3">About</a>
+          <a tabindex="4">Contact</a>
+        </nav>
+        <div class="menu-mobile" id="mySidenav">
+          <img src="/images/icon-close.svg" alt="close" class="close-menu" />
+          <div class="nav-links">
+            <a class="nav-link"> home </a>
+            <a class="nav-link"> shop </a>
+            <a class="nav-link"> about </a>
+            <a class="nav-link"> contact </a>
+          </div>
+        </div>
+      </header>
+      <hero role="region" aria-label="Content slider">
+        <div class="template first" data-slide="1">
+          <p class="hero-title">Discover innovative ways to decorate</p>
+          <p class="hero-description">
+            We provide unmatched quality, comfort, and style for property owners
+            across the country. Our experts combine form and function in
+            bringing your vision to life. Create a room in your own style with
+            our collection and make your property a reflection of you and what
+            you love.
+          </p>
+          <p class="shop-now">
+            Shop now <img src="/images/icon-arrow.svg" alt="arrow" />
+          </p>
+        </div>
+        <div class="template second">
+          <p class="hero-title">We are available all across the globe</p>
+          <p class="hero-description">
+            With stores all over the world, it's easy for you to find furniture
+            for your home or place of business. Locally, we’re in most major
+            cities throughout the country. Find the branch nearest you using our
+            store locator. Any questions? Don't hesitate to contact us today.
+          </p>
+          <p class="shop-now">
+            Shop now <img src="/images/icon-arrow.svg" alt="arrow" />
+          </p>
+        </div>
+        <div class="template third">
+          <p class="hero-title">Manufactured with the best materials</p>
+          <p class="hero-description">
+            Our modern furniture store provide a high level of quality. Our
+            company has invested in advanced technology to ensure that every
+            product is made as perfect and as consistent as possible. With three
+            decades of experience in this industry, we understand what customers
+            want for their home and office.
+          </p>
+          <p class="shop-now">
+            Shop now <img src="/images/icon-arrow.svg" alt="arrow" />
+          </p>
+        </div>
+        <div class="arrows">
+          <button class="arrow-btn" aria-label="previous slide">
+            <img src="/images/icon-angle-left.svg" alt="" />
+          </button>
+          <button class="arrow-btn" aria-label="next slide">
+            <img src="/images/icon-angle-right.svg" alt="" />
+          </button>
+        </div>
+      </hero>
+    </section>
+    <section class="information" aria-label="About our furniture">
+      <img
+        src="/images/image-about-dark.jpg"
+        alt="dark-picture"
+        role="presentation"
+      />
+      <div class="main-info">
+        <h1 class="title-information">About our furniture</h1>
+        <p class="information-description">
+          Our multifunctional collection blends design and function to suit your
+          individual taste. Make each room unique, or pick a cohesive theme that
+          best express your interests and what inspires you. Find the furniture
+          pieces you need, from traditional to contemporary styles or anything
+          in between. Product specialists are available to help you create your
+          dream space.
+        </p>
+      </div>
+      <img
+        src="/images/image-about-light.jpg"
+        alt="light-picture"
+        role="presentation"
+      />
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
